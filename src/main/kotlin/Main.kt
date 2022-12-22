@@ -1,7 +1,14 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+const val FILENAME = "src/main/resources/graph.txt"
+const val SOURCE = 0
+fun main() {
+    val graph: Array<IntArray> = GraphReader.getGraph(FILENAME)
+    if (!graph.isGraph()) {
+        println("Not graph!")
+        return
+    }
+    FordBellman.calc(graph, SOURCE)
+}
+private fun Array<IntArray>.isGraph(): Boolean {
+    return this.none { it.size != this.size }
 }
