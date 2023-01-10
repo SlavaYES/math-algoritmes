@@ -4,7 +4,7 @@ class GraphGenerator {
             val graph: MutableMap<Int, MutableList<Pair<Int, Int>>> = linkedMapOf()
 
             for (row in 0 until rows) {
-                for (col in row until cols) {
+                for (col in 0 until cols) {
                     var tmp: Pair<Int, Int>? = null
                     val index = row * cols + col
                     if (col + 1 < cols) {
