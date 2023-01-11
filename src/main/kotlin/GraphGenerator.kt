@@ -30,6 +30,7 @@ class GraphGenerator {
                     }
                 }
             }
+            graph[rows * cols - 1] = mutableListOf()
             return graph
         }
     }
