@@ -10,7 +10,7 @@ fun main() {
     } else {
         GraphReader.getGraph(FILENAME) // TODO
     }
-    Deikstra.calcAndPrint(graph, N * N, SOURCE)
+    Deikstra.calc(graph, SOURCE)
 }
 fun addVertex(graph: MutableMap<Int, MutableList<Pair<Int, Int>>>, from: Int, to: Int, weight: Int) {
     if (graph.containsKey(from - 1)) {

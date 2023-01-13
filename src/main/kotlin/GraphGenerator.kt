@@ -1,7 +1,7 @@
 class GraphGenerator {
     companion object {
-        fun getGraphRandom(rows: Int, cols: Int) : MutableMap<Int, MutableList<Pair<Int, Int>>> {
-            val graph: MutableMap<Int, MutableList<Pair<Int, Int>>> = linkedMapOf()
+        fun getGraphRandom(rows: Int, cols: Int) : List<List<Pair<Int, Int>>> {
+            val graph: List<MutableList<Pair<Int, Int>>> = List(rows * cols) { mutableListOf() }
 
             for (row in 0 until rows) {
                 for (col in 0 until cols) {
@@ -11,26 +11,17 @@ class GraphGenerator {
                         tmp = Pair(index + 1, 1)
                     }
                     if (tmp != null) {
-                        if (!graph.containsKey(index)) {
-                            graph[index] = mutableListOf(tmp)
-                        } else {
-                            graph[index]?.add(tmp)
-                        }
+                        graph[index].add(tmp)
                     }
                     tmp = null
                     if (row + 1 < rows) {
                         tmp = Pair(index + cols, 1)
                     }
                     if (tmp != null) {
-                        if (!graph.containsKey(index)) {
-                            graph[index] = mutableListOf(tmp)
-                        } else {
-                            graph[index]?.add(tmp)
-                        }
+                        graph[index].add(tmp)
                     }
                 }
             }
-            graph[rows * cols - 1] = mutableListOf()
             return graph
         }
     }
