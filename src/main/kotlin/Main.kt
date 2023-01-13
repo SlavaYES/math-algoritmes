@@ -1,7 +1,8 @@
 
 const val FILENAME = "src/main/resources/graph.txt"
 const val SOURCE = 1 - 1
-const val N = 1000
+const val N = 3
+const val DESTINATION = N * N - 1
 const val IS_RANDOM = true
 
 fun main() {
@@ -10,7 +11,10 @@ fun main() {
     } else {
         GraphReader.getGraph(FILENAME) // TODO
     }
-    Deikstra.calc(graph, SOURCE)
+    val print = true
+    Deikstra.calcLow(graph, SOURCE, DESTINATION, print)
+    Deikstra.calcMiddle(graph, SOURCE, DESTINATION, print)
+    Deikstra.calcFast(graph, SOURCE, DESTINATION, print)
 }
 fun addVertex(graph: MutableMap<Int, MutableList<Pair<Int, Int>>>, from: Int, to: Int, weight: Int) {
     if (graph.containsKey(from - 1)) {
