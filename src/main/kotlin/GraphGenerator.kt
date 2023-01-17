@@ -1,6 +1,6 @@
 class GraphGenerator {
     companion object {
-        fun getGraphRandom(rows: Int, cols: Int) : List<List<Pair<Int, Int>>> {
+        fun getGraphRandom(rows: Int, cols: Int) : List<MutableList<Pair<Int, Int>>> {
             val graph: List<MutableList<Pair<Int, Int>>> = List(rows * cols) { mutableListOf() }
 
             for (row in 0 until rows) {

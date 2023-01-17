@@ -7,8 +7,8 @@
     <list default="true" id="598cc0ba-8e64-46ad-a506-242f45f539be" name="Changes" comment="deikstra list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Deikstra.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Deikstra.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/GraphGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/GraphGenerator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RowTable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RowTable.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673617787171</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="deikstra list">
+      <created>1673622629478</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673622629478</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

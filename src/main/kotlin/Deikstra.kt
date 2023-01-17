@@ -136,11 +136,20 @@ class Deikstra {
                     }
                     println()
                 }
-                paths[graph.size - 1].forEach {
+            } else {
+                var v = destination
+                while (v != source) {
+                    paths[destination].add(v)
+                    v = p[v]
+                }
+                paths[destination].add(source)
+                paths[destination].reverse()
+                paths[destination].forEach {
                     print("${it + 1} ")
                 }
+                println("\nsize = ${d[destination]}")
             }
-            println("\nsize = ${d[destination]}")
+
         }
 
         fun calcFast(graph: List<List<Pair<Int, Int>>>, source: Int, destination: Int, print: Boolean) {
@@ -194,16 +203,16 @@ class Deikstra {
                     pathPrint.add(v)
                 }
             }
-            for (i in graph.indices) {
-                var v = i
-                while (v != source) {
-                    paths[i].add(v)
-                    v = p[v]
-                }
-                paths[i].add(source)
-                paths[i].reverse()
-            }
             if (print) {
+                for (i in graph.indices) {
+                    var v = i
+                    while (v != source) {
+                        paths[i].add(v)
+                        v = p[v]
+                    }
+                    paths[i].add(source)
+                    paths[i].reverse()
+                }
                 paths.forEachIndexed { idx, it ->
                     print("${idx + 1} = ")
                     it.forEach { jt ->
@@ -211,11 +220,19 @@ class Deikstra {
                     }
                     println()
                 }
-                paths[graph.size - 1].forEach {
+            } else {
+                var v = destination
+                while (v != source) {
+                    paths[destination].add(v)
+                    v = p[v]
+                }
+                paths[destination].add(source)
+                paths[destination].reverse()
+                paths[destination].forEach {
                     print("${it + 1} ")
                 }
+                println("\nsize = ${d[destination]}")
             }
-            println("\nsize = ${d[destination]}")
         }
     }
 }
